@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Dev Question</title>
+</head>
+
+<body class="bg-sky-200 min-h-screen">
+    <section class="max-w-[1400px] md:mx-auto py-5">
+        <header class="bg-white flex justify-between p-3 rounded-xl shadow-md ">
+            <div class="flex items-center gap-2">
+                <img class="w-9" src="assets/logo.png" alt="" />
+                <h1 class="text-2xl"><span class="text-gray-700">Dev</span><span class="font-bold">Board</span></h1>
+            </div>
+            <button id="back-to-desk-btn" class="btn btn-primary">Back to Desk</button>
+        </header>
+
+        <main id="container-box">
+            <h1 class="text-2xl font-bold text-center py-10">Blogs</h1>
+            <section class="space-y-3 mx-10">
+
+                <!-- blog-1 -->
+                <div class="p-3 bg-white rounded-md">
+                    <h2 class="font-bold">Question-1: What are the different ways to select an element in the DOM?</h2>
+                    <hr class="my-3 border-gray-500 border-dashed" />
+                    <p class="text-gray-500">Way to select an element in DOM:</p>
+                    <ol class="list-decimal pl-5 text-gray-500">
+                        <li><code>getElementById()</code></li>
+                        <li><code>getElementsByClassName()</code></li>
+                        <li><code>querySelector()</code></li>
+                        <li><code>querySelectorAll()</code></li>
+                    </ol>
+                </div>
+
+                <!-- blog-2 -->
+                <div class="p-3 bg-white rounded-md">
+                    <h2 class="font-bold">
+                        Question-2: What is the difference between innerHTML, innerText, and textContent?
+                    </h2>
+                    <hr class="my-3 border-gray-500 border-dashed" />
+                    <p class="text-gray-500"><strong>innerHTML</strong> returns Inner HTML including tags.</p>
+                    <p class="text-gray-500"><strong>innerText</strong> returns Visible text only.</p>
+                    <p class="text-gray-500"><strong>textContent</strong> returns All text inside element (visible or hidden).</p>
+                </div>
+
+                <!-- blog-3 -->
+                <div class="p-3 bg-white rounded-md">
+                    <h2 class="font-bold">Question-3: What is event delegation in the DOM?</h2>
+                    <hr class="my-3 border-gray-500 border-dashed" />
+                    <p class="text-gray-500">
+                        It is the technique of adding a single event listener to a parent element to handle events
+                        triggered by its child elements.
+                    </p>
+                </div>
+
+                <!-- blog-4 -->
+                <div class="p-3 bg-white rounded-md">
+                    <h2 class="font-bold">Question-4: What is event bubbling in the DOM?</h2>
+                    <hr class="my-3 border-gray-500 border-dashed" />
+                    <p class="text-gray-500">
+                        Event bubbling means when you click or do something on an element, the event first happens
+                        there, then it moves up to that element’s parent, then to the parent’s parent, and so on. It’s
+                        like bubbles rising up through water.
+                    </p>
+                </div>
+
+                <!-- blog-5 -->
+                <div class="p-3 bg-white rounded-md">
+                    <h2 class="font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+                    <hr class="my-3 border-gray-500 border-dashed" />
+                    <p class="text-gray-500">
+                        Create: <code>document.createElement('tag')</code><br />
+                        Add: <code>parent.appendChild(child)</code><br />
+                        Remove: <code>parent.removeChild(child)</code>
+                    </p>
+                </div>
+
+            </section>
+        </main>
+    </section>
+
+    <script src="js/toggle.js"></script>
+</body>
+
+</html>

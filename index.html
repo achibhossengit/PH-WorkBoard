@@ -9,7 +9,7 @@
     <title>Dev Board</title>
 </head>
 
-<body class="bg-sky-200 min-h-screen">
+<body id="body-container" class="bg-sky-200 min-h-screen">
     <section class="max-w-[1400px] mx-auto py-5">
         <header class="bg-white flex justify-between p-3 rounded-xl ">
             <div class="flex items-center gap-2">
@@ -19,10 +19,10 @@
             <div class="flex items-center gap-5">
                 <div class="flex items-center gap-2 bg-gray-200 px-2 rounded-md">
                     <img class="w-5" src="assets/checkbox.png" alt="">
-                    <h1 class="font-extrabold text-xl">23</h1>
+                    <h1 id="complete-task-cnt" class="font-extrabold text-xl">23</h1>
                 </div>
                 <div>
-                    <img class="w-7 bg-gray-200 rounded-full p-1" src="assets/theme-btn.png" alt="">
+                    <img id="color-picker" class="w-7 bg-gray-200 rounded-full p-1" src="assets/theme-btn.png" alt="">
                 </div>
             </div>
         </header>
@@ -37,11 +37,11 @@
                         </div>
                         <div>
                             <h1>Task Assinged</h1>
-                            <h1 class="text-xl font-extrabold">06</h1>
+                            <h1 id="task-cnt" class="text-xl font-extrabold">6</h1>
                         </div>
                     </div>
-                    <div
-                        class="col-span-2 bg-gradient-to-r from-blue-700 to-blue-200 rounded-md p-3 flex items-center gap-2">
+                    <div id="discover-cart"
+                        class="cursor-pointer col-span-2 bg-gradient-to-r from-blue-700 to-blue-200 rounded-md p-3 flex items-center gap-2">
                         <img src="assets/board.png" alt="">
                         <h1 class="text-xl font-bold text-white">Discover Something New Today!</h1>
                     </div>
@@ -49,104 +49,122 @@
                         <div class="bg-white p-2 rounded-full">
                             <img class="w-5" src="assets/calender.png" alt="">
                         </div>
-                        <p class="">Fri, <span class="block font-semibold">Feb 28</span></p>
+                        <p id="today" class="block font-semibold"></p>
                     </div>
                 </div>
 
-                <hr>
+                <hr class="my-3 border-gray-500 border-dashed">
                 <!-- lower container -->
                 <div class="mt-5 grid grid-cols-3 gap-5">
                     <!-- cart -->
                     <div class="bg-gray-200 p-3 rounded-xl space-y-3">
-                        <p class="bg-white rounded-md px-2 py-1 w-20 text-sm">Shop Ease</p>
-                        <h2 class="text-gray-800 font-semibold text-xl">Fix Mobile Button Issue</h2>
-                        <p class="bg-white rounded-md p-2 text-gray-400">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Libero aliquam minima fugit dolor
-                            quo obcaecati rerum, voluptas id quasi porro!</p>
+                        <p class="bg-white rounded-md px-2 py-1 inline-block whitespace-nowrap text-sm">Tech Savvy</p>
+                        <h2 class="text-gray-800 font-semibold text-xl">Resolve Login Issues</h2>
+                        <p class="bg-white rounded-md p-2 text-gray-400">
+                            Resolve login-related problems for better user experience on the platform, including fixing
+                            password reset flows, improving multi-factor authentication processes, and enhancing session
+                            management for security.
+                        </p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-gray-500">Deadline</p>
-                                <p class="font-semibold">21 march 2025</p>
+                                <p class="font-semibold">21 March 2025</p>
                             </div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button class="task-btn btn btn-primary">Complete</button>
                         </div>
                     </div>
                     <!-- cart -->
                     <div class="bg-gray-200 p-3 rounded-xl space-y-3">
-                        <p class="bg-white rounded-md px-2 py-1 w-20 text-sm">Shop Ease</p>
-                        <h2 class="text-gray-800 font-semibold text-xl">Fix Mobile Button Issue</h2>
-                        <p class="bg-white rounded-md p-2 text-gray-400">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Libero aliquam minima fugit dolor
-                            quo obcaecati rerum, voluptas id quasi porro!</p>
+                        <p class="bg-white rounded-md px-2 py-1 inline-block whitespace-nowrap text-sm">Creative Co.</p>
+                        <h2 class="text-gray-800 font-semibold text-xl">Plan Marketing Campaign</h2>
+                        <p class="bg-white rounded-md p-2 text-gray-400">
+                            Outline detailed strategies and timelines for the upcoming social media marketing campaign.
+                            This includes defining target audiences, budgeting, content creation schedules, and KPIs to
+                            track the campaign’s success.
+                        </p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-gray-500">Deadline</p>
-                                <p class="font-semibold">21 march 2025</p>
+                                <p class="font-semibold">21 March 2025</p>
                             </div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button class="task-btn btn btn-primary">Complete</button>
                         </div>
                     </div>
                     <!-- cart -->
                     <div class="bg-gray-200 p-3 rounded-xl space-y-3">
-                        <p class="bg-white rounded-md px-2 py-1 w-20 text-sm">Shop Ease</p>
+                        <p class="bg-white rounded-md px-2 py-1 inline-block whitespace-nowrap text-sm">Build Masters
+                        </p>
                         <h2 class="text-gray-800 font-semibold text-xl">Fix Mobile Button Issue</h2>
-                        <p class="bg-white rounded-md p-2 text-gray-400">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Libero aliquam minima fugit dolor
-                            quo obcaecati rerum, voluptas id quasi porro!</p>
+                        <p class="bg-white rounded-md p-2 text-gray-400">
+                            Optimize mobile responsiveness by fixing button placement and behavior on smaller devices,
+                            ensuring smoother navigation, faster load times, and consistent user interaction across all
+                            platforms.
+                        </p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-gray-500">Deadline</p>
-                                <p class="font-semibold">21 march 2025</p>
+                                <p class="font-semibold">21 March 2025</p>
                             </div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button class="task-btn btn btn-primary">Complete</button>
                         </div>
                     </div>
                     <!-- cart -->
                     <div class="bg-gray-200 p-3 rounded-xl space-y-3">
-                        <p class="bg-white rounded-md px-2 py-1 w-20 text-sm">Shop Ease</p>
-                        <h2 class="text-gray-800 font-semibold text-xl">Fix Mobile Button Issue</h2>
-                        <p class="bg-white rounded-md p-2 text-gray-400">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Libero aliquam minima fugit dolor
-                            quo obcaecati rerum, voluptas id quasi porro!</p>
+                        <p class="bg-white rounded-md px-2 py-1 inline-block whitespace-nowrap text-sm">Web Innovators
+                        </p>
+                        <h2 class="text-gray-800 font-semibold text-xl">Upgrade Security</h2>
+                        <p class="bg-white rounded-md p-2 text-gray-400">
+                            Implement comprehensive security updates including patching vulnerabilities, strengthening
+                            encryption protocols, updating firewall rules, and conducting penetration tests to ensure
+                            website protection from breaches.
+                        </p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-gray-500">Deadline</p>
-                                <p class="font-semibold">21 march 2025</p>
+                                <p class="font-semibold">21 March 2025</p>
                             </div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button class="task-btn btn btn-primary">Complete</button>
                         </div>
                     </div>
                     <!-- cart -->
                     <div class="bg-gray-200 p-3 rounded-xl space-y-3">
-                        <p class="bg-white rounded-md px-2 py-1 w-20 text-sm">Shop Ease</p>
-                        <h2 class="text-gray-800 font-semibold text-xl">Fix Mobile Button Issue</h2>
-                        <p class="bg-white rounded-md p-2 text-gray-400">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Libero aliquam minima fugit dolor
-                            quo obcaecati rerum, voluptas id quasi porro!</p>
+                        <p class="bg-white rounded-md px-2 py-1 inline-block whitespace-nowrap text-sm">Data Dynamics
+                        </p>
+                        <h2 class="text-gray-800 font-semibold text-xl">Improve Loading Speed</h2>
+                        <p class="bg-white rounded-md p-2 text-gray-400">
+                            Optimize the website's loading speed by compressing images, minimizing CSS and JavaScript
+                            files, leveraging browser caching, and using a CDN to provide better user engagement and SEO
+                            ranking.
+                        </p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-gray-500">Deadline</p>
-                                <p class="font-semibold">21 march 2025</p>
+                                <p class="font-semibold">21 March 2025</p>
                             </div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button class="task-btn btn btn-primary">Complete</button>
                         </div>
                     </div>
                     <!-- cart -->
                     <div class="bg-gray-200 p-3 rounded-xl space-y-3">
-                        <p class="bg-white rounded-md px-2 py-1 w-20 text-sm">Shop Ease</p>
-                        <h2 class="text-gray-800 font-semibold text-xl">Fix Mobile Button Issue</h2>
-                        <p class="bg-white rounded-md p-2 text-gray-400">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Libero aliquam minima fugit dolor
-                            quo obcaecati rerum, voluptas id quasi porro!</p>
+                        <p class="bg-white rounded-md px-2 py-1 inline-block whitespace-nowrap text-sm">Code Crafters
+                        </p>
+                        <h2 class="text-gray-800 font-semibold text-xl">Launch New Features</h2>
+                        <p class="bg-white rounded-md p-2 text-gray-400">
+                            Deploy the latest features such as real-time notifications, user profile customization
+                            options, and enhanced analytics dashboards to improve overall functionality and user
+                            satisfaction.
+                        </p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-gray-500">Deadline</p>
-                                <p class="font-semibold">21 march 2025</p>
+                                <p class="font-semibold">21 March 2025</p>
                             </div>
-                            <button class="btn btn-primary">Completed</button>
+                            <button class="task-btn btn btn-primary">Complete</button>
                         </div>
                     </div>
                 </div>
+
+
             </div>
 
             <!-- right side -->
@@ -157,16 +175,21 @@
                         <h4 class="font-semibold">Activity Log</h4>
                     </div>
                 </div>
-                <button class="btn btn-primary">Clear History</button>
-                <hr class="my-3">
-                <div class="space-y-2">
-                    <div class="bg-gray-200 rounded-md p-1">
-                        <p class="text-sm">You have Complete The Task at 12:30 PM</p>
-                    </div>
+                <button id="clear-btn" class="btn btn-primary">Clear History</button>
+                <hr class="my-3 border-gray-500 border-dashed">
+                <div id="activity-log" class="space-y-2">
+                    <!-- dynamic activity log -->
                 </div>
             </div>
         </main>
     </section>
+
+    <script src="js/randomColor.js"></script>
+    <script src="js/toggle.js"></script>
+    <script src="js/complete.js"></script>
+    <script src="js/clearActivity.js"></script>
+    <script src="js/clearActivity.js"></script>
+
 </body>
 
 </html>
